@@ -52,8 +52,8 @@ func main() {
 
 	host := os.Args[1]
 	cmd := ""
-	if len(os.Args) > 2 {
-		cmd = os.Args[2]
+	if len(cmd) == 0 && !strings.Contains(host, "dokku") {
+		cmd = "dokku"
 	}
 
 	fmt.Printf("dokku-prompt %s (rev-%s)\n", version, revision)
