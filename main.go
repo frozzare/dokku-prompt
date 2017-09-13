@@ -47,7 +47,7 @@ func Completer(d prompt.Document) []prompt.Suggest {
 
 func main() {
 	if len(os.Args) < 2 {
-		log.Fatal("No dokku host provided")
+		log.Fatal("No ssh host provided")
 	}
 
 	host := os.Args[1]
