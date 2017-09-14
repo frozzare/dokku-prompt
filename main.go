@@ -27,10 +27,10 @@ func Executor(h, c string) func(string) {
 			return
 		}
 
-		c = strings.TrimSpace(strings.Join([]string{c, s}, " "))
-		c = fmt.Sprintf("ssh %s '%s'", h, c)
+		cc := strings.TrimSpace(strings.Join([]string{c, s}, " "))
+		cc = fmt.Sprintf("ssh %s '%s'", h, cc)
 
-		cmd := exec.Command("/bin/sh", "-c", c)
+		cmd := exec.Command("/bin/sh", "-c", cc)
 		cmd.Stdin = os.Stdin
 		cmd.Stdout = os.Stdout
 		cmd.Stderr = os.Stderr
