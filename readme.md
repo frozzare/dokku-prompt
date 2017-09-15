@@ -20,6 +20,6 @@ Example:
 dokku-prompt dokku@example.com
 ```
 
-# License
+## License
 
 MIT © [Fredrik Forsmo](https://github.com/frozzare)
